@@ -1,0 +1,15 @@
+C:\Users\raymo\source\repos\CPractice\bin\Debug\net8.0\CPractice.exe
+C:\Users\raymo\source\repos\CPractice\bin\Debug\net8.0\CPractice.deps.json
+C:\Users\raymo\source\repos\CPractice\bin\Debug\net8.0\CPractice.runtimeconfig.json
+C:\Users\raymo\source\repos\CPractice\bin\Debug\net8.0\CPractice.dll
+C:\Users\raymo\source\repos\CPractice\bin\Debug\net8.0\CPractice.pdb
+C:\Users\raymo\source\repos\CPractice\obj\Debug\net8.0\CPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\raymo\source\repos\CPractice\obj\Debug\net8.0\CPractice.AssemblyInfoInputs.cache
+C:\Users\raymo\source\repos\CPractice\obj\Debug\net8.0\CPractice.AssemblyInfo.cs
+C:\Users\raymo\source\repos\CPractice\obj\Debug\net8.0\CPractice.csproj.CoreCompileInputs.cache
+C:\Users\raymo\source\repos\CPractice\obj\Debug\net8.0\CPractice.sourcelink.json
+C:\Users\raymo\source\repos\CPractice\obj\Debug\net8.0\CPractice.dll
+C:\Users\raymo\source\repos\CPractice\obj\Debug\net8.0\refint\CPractice.dll
+C:\Users\raymo\source\repos\CPractice\obj\Debug\net8.0\CPractice.pdb
+C:\Users\raymo\source\repos\CPractice\obj\Debug\net8.0\CPractice.genruntimeconfig.cache
+C:\Users\raymo\source\repos\CPractice\obj\Debug\net8.0\ref\CPractice.dll
