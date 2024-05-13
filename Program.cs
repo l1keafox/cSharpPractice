@@ -1,62 +1,50 @@
 ﻿using System;
 
-namespace HelloWorld;
-
-internal class Program
+namespace myFirstProgram
 {
-    enum Cash{
-        Twenty,
-        Ten,
-        Five,
-        One,
-        Quarter,
-        Dime,
-        Nickle,
-        Penny
-    }
-    static void Main(string[] args)
+    class Program
     {
-        var rand = new Random();
-
-        for (int ctr = 0; ctr <= 4; ctr++)
+        static void Main(string[] args)
         {
-            // moneygiven random between 0 to 100 dollars including cents.
-            int cashInCents = rand.Next(10000);
-
-            // Now we determine how an random charge value.
-            int chargeInCents = rand.Next(cashInCents);
-
-            int change = cashInCents - chargeInCents;
-
-            Console.Write("Cash${0} - Charge${1} = Change${2} ", cashInCents, chargeInCents, change);
-            int[] values = [2000, 1000, 500, 100, 25, 10, 5, 1];
-            int[] changeValues = [];
-            foreach( int cashValue in values)
-            {
-                int cashReturn = getCashReturn(change, cashValue);
-                change -= cashReturn * cashValue;
-                Array.Resize(ref changeValues, changeValues.Length + 1);
-                changeValues[changeValues.GetUpperBound(0)] = cashReturn;
-            }
-
-            foreach (var item in Enum.GetValues(typeof(Cash)))
-            {
-                var name = item.ToString();
-                var value = (int)item;
-                Console.Write("{0} = {1} ,", name, changeValues[value]);
-            }
-            Console.WriteLine();
-
-
+            Car car = new Car();
+            Bicycle bicycle = new Bicycle();
+            Boat boat = new Boat();
+            car.speed = 100;
+            Console.WriteLine("Car speed: {0}, wheels:{1}", car.speed, car.wheels);
+            car.go();
+            Console.WriteLine("bicycle speed: {0}, wheels:{1}", bicycle.speed, bicycle.wheels);
+            bicycle.go();
+            Console.WriteLine("boat speed: {0}, wheels:{1}", boat.speed, boat.wheels);
+            boat.go();
+            //Console.ReadKey();
         }
     }
 
-    private static int getCashReturn(float change, float cashValue)
+    class Vehicle
     {
-            if (change < cashValue)
-            {
-                return 0;
-            }
-            return (int)Math.Floor(change / cashValue);
+        public int speed = 0;
+
+        public virtual void go() {
+            Console.WriteLine("This Vehicle is moving!");
+        }
+    }
+
+    class Car : Vehicle
+    {
+        public int wheels = 4;
+        public override void go()
+        {
+            Console.WriteLine("Car is Rolling on {0} wheels",wheels);
+        }
+    }
+
+    class Bicycle : Vehicle
+    {
+        public int wheels = 2;
+    }
+
+    class Boat : Vehicle
+    {
+        public int wheels = 0;
     }
 }
