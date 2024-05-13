@@ -9,14 +9,21 @@ namespace myFirstProgram
             Car car = new Car();
             Bicycle bicycle = new Bicycle();
             Boat boat = new Boat();
-            car.speed = 100;
+            /*car.speed = 100;
             Console.WriteLine("Car speed: {0}, wheels:{1}", car.speed, car.wheels);
             car.go();
             Console.WriteLine("bicycle speed: {0}, wheels:{1}", bicycle.speed, bicycle.wheels);
             bicycle.go();
             Console.WriteLine("boat speed: {0}, wheels:{1}", boat.speed, boat.wheels);
-            boat.go();
-            //Console.ReadKey();
+            boat.go(); */
+
+            Vehicle[] vehicles = { car, bicycle, boat };
+
+            foreach(Vehicle vehicle in vehicles)
+            {
+                vehicle.Go();
+            }
+            
         }
     }
 
@@ -24,17 +31,19 @@ namespace myFirstProgram
     {
         public int speed = 0;
 
-        public virtual void go() {
+        public virtual void Go() {
             Console.WriteLine("This Vehicle is moving!");
+
         }
     }
 
     class Car : Vehicle
     {
         public int wheels = 4;
-        public override void go()
+        public override void Go()
         {
             Console.WriteLine("Car is Rolling on {0} wheels",wheels);
+            base.Go();
         }
     }
 
